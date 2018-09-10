@@ -1,26 +1,21 @@
-pipeline {
-    agent any 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }  
-        stage('Stage Greetings') {
-            steps {
-                echo 'Hello Jenkins!' 
-            }
-        }
+node {
+
+    echo "Scripting Jenkins..."
+
+    stage 'Stage is Checkout'
+    echo  "Stage is Checkout"
+    checkout scm 
+
+    stage 'Stage is Build'
+    echo  "Stage is Build"
+    sh "cd src"
+    sh "javac TUCGrader.java"
+
+    stage 'Stage is Test'
+    echo  "Stage is Test"
+    //sh "cd src"
+    sh "java TUCGrader"
+
+    echo "Jenkins complete..."
   
-    }
 }
