@@ -4,25 +4,20 @@ node {
 
     stage('Checkout') {
         echo  "Stage is Checkout"
-	checkout scm 
+	    checkout scm 
     }
 
     stage('Build') {
     	echo  "Stage is Build"
-        dir
-        echo  "After the dir command"
-        cd src
-        echo  "After cd src command"
-    	javac TUCGrader.java
-        echo  "After javac TUCGrader.java command"
+        bat 'dir src'
+        bat 'buildit.bat'
+        echo  "After build bat"
     }
 
     stage('Test') {
     	echo  "Stage is Test"
-        bat "dir"
-        echo  "After the dir command"
-    	//sh "cd src"
-    	bat "java TUCGrader"
+    	bat "runit.bat"
+        echo  "After runit.bat"
     }
 
     echo "Jenkins build complete..."
