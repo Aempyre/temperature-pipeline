@@ -1,21 +1,30 @@
 node {
 
-    echo "Scripting Jenkins..."
+    echo "Start Jenkins build process..."
 
-    stage 'Stage is Checkout'
-    echo  "Stage is Checkout"
-    checkout scm 
+    stage('Checkout') {
+        echo  "Stage is Checkout"
+	checkout scm 
+    }
 
-    stage 'Stage is Build'
-    echo  "Stage is Build"
-    sh "cd src"
-    sh "javac TUCGrader.java"
+    stage('Build') {
+    	echo  "Stage is Build"
+        dir
+        echo  "After the dir command"
+        cd src
+        echo  "After cd src command"
+    	javac TUCGrader.java
+        echo  "After javac TUCGrader.java command"
+    }
 
-    stage 'Stage is Test'
-    echo  "Stage is Test"
-    //sh "cd src"
-    sh "java TUCGrader"
+    stage('Test') {
+    	echo  "Stage is Test"
+        bat "dir"
+        echo  "After the dir command"
+    	//sh "cd src"
+    	bat "java TUCGrader"
+    }
 
-    echo "Jenkins complete..."
+    echo "Jenkins build complete..."
   
 }

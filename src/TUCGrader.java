@@ -1,4 +1,4 @@
-class TUCGrader {
+public class TUCGrader {
 
     public static void main(String[] args) {
         System.out.println(
