@@ -1,1 +1,1 @@
-"C:\Program Files\Java\jdk1.8.0_181\bin\javac" -verbose src/TUCGrader.java
+"C:\Program Files\Java\jdk1.8.0_181\bin\javac" -cp ./src;./src/utility;./src/userinterface src/TUCGrader.java

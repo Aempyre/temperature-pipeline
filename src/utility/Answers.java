@@ -21,7 +21,7 @@ public class Answers {
     public String checkAnswer(String originalTemperature,
                               String originalUnitOfMeasure,
                               String studentTempNumber,
-                              String targetUnitOfMeasure) {
+                              String targetUnitOfMeasure)  throws Exception {
 
         String response = INVALID;
 

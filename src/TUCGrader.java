@@ -80,9 +80,13 @@ public class TUCGrader {
                 continue;
             }
 
-            Menu.showResult(
-                answers.checkAnswer(originalTemp, originalUnit, studentTemp, targetUnit)
-            );
+            try {
+                Menu.showResult(
+                    answers.checkAnswer(originalTemp, originalUnit, studentTemp, targetUnit)
+                );     
+            } catch (Exception e) {
+                System.out.println("Caught exception:  " + e.getMessage());
+            }
 
         }
 
