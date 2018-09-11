@@ -2,10 +2,8 @@
 A basic continuous integration/continuous deploy pipeline.
 
 **Note:** The approach taken, though working, was supposed to be a time saver but it probably *would have* been faster to rent another cloud server and set up Jenkins there.  Anyhow, the thinking was:
-...* Save time and money by running Jenkins locally on my windows laptop!
-.....(Turns out it was a bit different than setting it up in the normal, server way.)
-...* Make it compact to set up and evaluate:  Just install Jenkins, pull the repo. & go!
-.....(It turned out somewhat like that after all -- with caveats).
+* Save time and money by running Jenkins locally on my windows laptop!  (Turns out it was a bit different than setting it up in the normal, server way.)
+* Make it compact to set up and evaluate:  Just install Jenkins, pull the repo. & go!  (It turned out somewhat like that after all -- with caveats).
 
 Caveats:
 1.  On windows you have to use "bat" not "sh" to run scripts -- couldn't seem to get these to change directories (don't recall this being a problem with "sh" but maybe I forgot), hence the extra try hard in the .bat files for buildit, runit, testit -- they are forced to run from the project directory.
