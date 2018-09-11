@@ -16,8 +16,8 @@ node {
 
     stage('Test') {
     	echo  "Stage is Test"
-    	bat "runit.bat"
-        echo  "After runit.bat"
+    	bat "testit.bat"
+        echo  "After testit.bat"
     }
 
     echo "Jenkins build complete..."

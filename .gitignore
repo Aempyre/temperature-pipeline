@@ -1,2 +1,5 @@
 # Ignore java object files anywhere in the directory tree
 *.class
+
+# Ingnore IDE files
+.vscode/
