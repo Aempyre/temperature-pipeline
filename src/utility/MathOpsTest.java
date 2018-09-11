@@ -1,7 +1,7 @@
 import static org.junit.Assert.assertEquals;
 
 import java.math.BigDecimal;
-
+import utility.MathOps;
 import org.junit.Test;
 
 public class MathOpsTest {
